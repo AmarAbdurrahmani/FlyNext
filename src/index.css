@@ -1,0 +1,1558 @@
+/* You might want to import a font like 'Poppins' or 'Inter' in your main index.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-container {
+    min-height: 100vh;
+    background-color: #0d1a2e;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Important for the background elements */
+    /* For the background wavy lines, use an SVG or a PNG 
+    background-image: url('./assets/image.png');*/
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* ----- Header / Navigation ----- */
+.flynext-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #e5e5e5;
+}
+
+.logo span {
+    color: #b98f5a; /* A golden/orange color */
+    margin-left: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #ffffff;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.book-now-btn {
+    background-color: #b98f5a;
+    color: #0d1a2e;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+
+.book-now-btn:hover {
+    background-color: #a17b4c;
+}
+
+/* ----- Main Hero Content ----- */
+.hero-content {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 60px 1.2fr 1fr; /* Sidebar, Text, Image */
+    align-items: center;
+    gap: 40px;
+}
+
+.social-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 20px;
+}
+
+.social-sidebar a {
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+.social-sidebar a:hover {
+    color: #b98f5a;
+}
+
+.hero-text .brand-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #e5e5e5;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 25px 0;
+}
+
+.hero-text .description {
+    font-size: 1rem;
+    color: #a9b3c1;
+    max-width: 450px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cta-buttons button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: #b98f5a;
+    border-color: #a17b4c;
+    color: #0d1a2e;
+}
+
+.cta-buttons .btn-secondary {
+    border: none;
+}
+
+.cta-buttons .btn-secondary:hover {
+    color: #b98f5a;
+}
+
+
+/* ----- Image ----- */
+.hero-image {
+    justify-self: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    width: 650px;
+    /* This adds a subtle floating animation */
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0px 30px 50px rgba(0,0,0,0.4));
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ----- Decorative Elements ----- */
+.plus-icon {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #b98f5a;
+    opacity: 0.5;
+}
+
+.plus-1 {
+    top: 25%;
+    left: 40%;
+}
+
+.plus-2 {
+    top: 60%;
+    left: 45%;
+}
+
+
+.service-section {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.service-left {
+  position: relative;
+  flex: 1;
+}
+
+.service-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-left .overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.book-btn {
+  margin-top: 1rem;
+  background: gold;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.service-right {
+  flex: 1;
+  background: #0d1b2a;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.service-right .small-title {
+  color: gold;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.service-right h3 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.service-right ul {
+  list-style: none;
+  padding: 0;
+}
+.service-right .small-title {
+    font-size: 2.1rem;
+    color:  #b98f5a;
+}
+
+.service-right li {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.service-right li .number {
+  font-weight: bold;
+  margin-right: 10px;
+  color:  #b98f5a;
+}
+
+.service-right li.active {
+  color:  #b98f5a;
+}
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 100px 80px;
+  gap: 60px;
+  background: #fff;
+}
+
+.service-image {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service-subtitle {
+  font-size: 14px;
+  color: #ff4d4d;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.service-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.service-description {
+  color: #555;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.service-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-buttons button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.service-buttons button.active {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+.service-buttons button:hover {
+  color: #ff4d4d;
+}
+
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: url("./assets/stewardesa.webp") no-repeat center right/cover;
+  position: relative;
+  color: #fff; /* make text white on dark */
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;   /* dark overlay only on the left side */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.about-left {
+  position: relative; /* so text stays above overlay */
+  flex: 1;
+  z-index: 2;
+}
+
+.about-right {
+  flex: 1;
+  z-index: 2;
+}
+
+
+.about-left .small-title {
+  color: #b98f5a;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-left h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.about-left .description {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.about-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.call-box {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.call-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.call-box h3 {
+  margin: 5px 0 0;
+  color: #111;
+}
+
+.book-btn {
+  background:  #fca311;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #ffb742;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-thumbnail {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #eee url("your-thumbnail.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  font-size: 2rem;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.benefits-section {
+  text-align: center;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.benefits-section .small-title {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.benefits-section .small-title span {
+  color: #b98f5a;
+  font-weight: bold;
+}
+
+.benefits-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.benefit-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.benefit-card .icon {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.benefit-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Hover Effect */
+.benefit-card:hover {
+  background: #b98f5a;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.benefit-card:hover .icon {
+  color: #fff; /* icon becomes white */
+}
+
+.benefit-card:hover h3,
+.benefit-card:hover p {
+  color: #fff; /* text turns white */
+}
+
+
+.counter-section {
+  background: url("./assets/background.jpg") center/cover no-repeat;
+  padding: 80px 10%;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.counter-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 40, 0.7); /* dark overlay */
+}
+
+.counter-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  z-index: 2;
+}
+
+.counter-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.counter-box p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+
+.booking-container {
+  background: url("./assets/inter.webp") no-repeat center center;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  color: #fff;
+}
+
+.subtitle {
+  color: #b98f5a;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="date"] {
+  padding: 14px 12px;
+  border-radius: 6px;
+  border: 1px solid #b98f5a;
+  background: #1c1f26;
+  color: #fff;
+  min-width: 150px;
+}
+
+.passenger-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #b98f5a;
+  padding: 12px 10px;
+  border-radius: 6px;
+  background: #1c1f26;
+}
+
+.passenger-box button {
+  background: none;
+  border: none;
+  color: #b98f5a;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.book-btn {
+  background: #b98f5a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.book-btn:hover {
+  background: #a17b4c;
+}
+
+
+
+.testimonials-section {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+.section-header .subtitle {
+  color: #b98f5a;
+  font-size: 18px;
+}
+
+.section-header .title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.feedback {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.role {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #b98f5a;
+  font-size: 18px;
+}
+
+.logos-carousel {
+  margin-top: 40px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos-carousel img {
+  max-width: 150px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.footer {
+  background: #0d1a2e;
+  color: #fff;
+  padding: 50px 80px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.footer .highlight {
+  color: #b98f5a;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-about {
+  max-width: 300px;
+}
+
+.footer-about h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.footer-locations {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-locations h4 {
+  color: #b98f5a;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  border: 1px solid #b98f5a;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-links h4 {
+  border-bottom: 2px solid #b98f5a;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-links li:hover {
+  color: #b98f5a;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.newsletter button {
+  background: #b98f5a;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background: #a17b4c;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-social svg {
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-social svg:hover {
+  color: #b98f5a;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #b98f5a;
+  color: #0f172a;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+
+
+.flynext-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);   /* applies blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  /*background: rgba(0,0,0,0.7);       /* no solid color */
+  background-color: #666;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 70px; /* pull Search + Book Now button a bit left */
+}
+
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero section */
+.hero-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0d1a2e;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  /* remove rounded corners so it fills screen */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+/* This is the container for the "Pages" link and its dropdown menu. 
+   Position: relative is crucial for positioning the dropdown menu correctly underneath it. */
+.main-nav .dropdown {
+  position: relative; 
+}
+
+/* This is the dropdown menu itself. */
+.dropdown-menu li {
+  display: none; /* Hide the menu by default */
+  position: absolute; /* Position it relative to the .dropdown container */
+  top: 100%; /* Place it right below the "Pages" link */
+  left: 0;
+  background-color: #0d1a2e; /* Match your header or choose a different background */
+  list-style: none;
+  padding: 10px 0;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 8px;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* --- This is the key part --- */
+/* When you hover over the .dropdown container, target the .dropdown-menu inside it and change its display property to make it visible. */
+.dropdown:hover .dropdown-menu li{
+  display: block; /* Show the menu on hover */
+}
+
+
+/* Optional: Styling for the links inside the dropdown */
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #e5e5e5; /* Link color */
+  text-decoration: none;
+  display: block; /* Make the entire area clickable */
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #b98f5a; /* Hover background color for each item */
+}
+
+.dropdown-menu li:hover a {
+    color: #0d1a2e; /* Change link color on hover */
+}
+
+.dropdown {
+  color:#e5e5e5;
+}
+.dropdown:hover {
+  color: #ffffff;
+}
+
+/* ===== Header Layout ===== */
+.flynext-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0d1a2e;
+  color: #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+/* ===== Logo ===== */
+.logo {
+  font-size: 2.2rem;
+    font-weight: 700;
+    color: #e5e5e5;
+}
+
+.logo .highlight {
+  color: #b98f5a;
+}
+
+/* ===== Main Nav ===== */
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a,
+.main-nav span {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav span:hover {
+  color: #ffffff;
+}
+
+/* ===== Dropdown ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;              /* hidden by default */
+  position: absolute;
+  top: 100%;                  /* below "Pages" */
+  left: 0;
+  background-color: #0d1a2e;
+  min-width: 160px;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;             /* show on hover */
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #e5e5e5;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #b98f5a;
+}
+
+.dropdown-menu li:hover a {
+  color: #0d1a2e;
+}
+
+/* ===== Header Actions ===== */
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.book-now-btn {
+    background-color: #b98f5a;
+    color: #0d1a2e;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #a17b4c;
+}
+
+
+
+
+
+
+
+/* ===== Tablet (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 20px 40px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text .description {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .booking-container {
+    padding: 30px;
+    max-width: 600px;
+  }
+
+  .service-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 1;
+  }
+}
+
+/* ===== Mobile (up to 767px) ===== */
+@media (max-width: 767px) {
+  .flynext-header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-container {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text .description {
+    font-size: 0.9rem;
+  }
+
+  .booking-container {
+    padding: 20px;
+    margin: 30px 10px;
+  }
+
+  .booking-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service-section {
+    flex-direction: column;
+    padding: 40px 15px;
+    gap: 30px;
+  }
+
+  .service-image img {
+    max-width: 100%;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+
+/* Hamburger default hidden në desktop */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Main nav - desktop */
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+/* Dropdown menu desktop hover */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0d1a2e;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block; /* shfaq hamburger */
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 60px; /* nën header */
+    left: 0;
+    width: 100%;
+    background-color: #0d1a2e;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* default hidden */
+  }
+
+  .main-nav.open {
+    display: flex; /* shfaq kur klikohet hamburger */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+
+.flynext-header {
+  display: flex;
+  justify-content: space-between; /* logo majtas, hamburger djathtas */
+  align-items: center;
+  padding: 0 20px; /* zvogëlo padding për të shkuar te skajet */
+  background-color: #0d1a2e;
+  color: #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  box-sizing: border-box; /* siguro që padding të mos zhvendos elementet jashtë */
+}
+
+
+/* Sigurohu që logo të jetë në anën e majtë */
+.flynext-header .logo {
+  margin: 0; /* hiqi margjinat e padëshiruara */
+}
+
+/* Hamburger icon - default hidden në desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e5e5e5;
+}
+
+/* Media query për tablet/mobile */
+@media (max-width: 1024px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0d1a2e;
+    width: 200px;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+
+
+/* Desktop: Book Now jashtë menu */
+.mobile-book-now {
+  display: none;
+}
+
+/* Mobile/tablet */
+@media (max-width: 1024px) {
+  .desktop-book-now {
+    display: none; /* fsheh button desktop */
+  }
+
+  .mobile-book-now {
+    display: block; /* trego button brenda hamburger menu */
+    margin: 10px 0;
+  }
+
+  .main-nav {
+    display: none; /* menu e fshehur fillimisht */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0d1a2e;
+    width: 200px;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav li {
+    padding: 10px 20px;
+  }
+}
+
+
+.social-sidebar {
+  display: flex;
+  gap: 20px;
+  justify-content: center;  /* horizontale */
+  position: relative;       /* mos i vendos vertikalisht */
+  margin-top: 20px;
+}
+
+/* ikona individuale */
+.social-sidebar a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  color: #b98f5a;
+}
+
+/* Mobile / tablet */
+@media (max-width: 1024px) {
+  .social-sidebar {
+    flex-direction: row; /* horizontale edhe ne mobile */
+    justify-content: center;
+  }
+  @media (max-width: 1024px) {
+  /* hiqe ose ndrysho padding në diçka si 0 20px */
+  .flynext-header {
+    padding: 0 20px;
+  }
+}
+}
+
+
+
+
+
+.flynext-header {
+  display: flex;
+  justify-content: space-between; /* logo majtas, hamburger djathtas */
+  align-items: center;
+  padding: 0 20px; /* pak hapësirë nga skajet */
+  background-color: #0d1a2e;
+  color: #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo të jetë në majtë */
+.flynext-header .logo {
+  margin: 0;
+}
+
+/* Hamburger icon - default hidden në desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e5e5e5;
+  margin-left: auto;
+}
+
+/* Media query për tablet/mobile */
+@media (max-width: 1024px) {
+  .main-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100vw; /* mbulon gjithë gjërësinë e viewport-it */
+  background-color: #0d1a2e;
+  flex-direction: column;
+  border-radius: 0; /* hiq border-radius për stil më modern dhe full-screen */
+  padding: 20px;
+  z-index: 999;
+}
+
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* hamburger shfaqet në mobile */
+  }
+
+  /* Book Now button */
+  .desktop-book-now {
+    display: none;
+  }
+
+  .mobile-book-now {
+    display: block;
+    margin: 10px 20px;
+  }
+
+  /* Siguro që header të mos mbishkruhet */
+  .flynext-header {
+    padding: 0 20px; /* mos vendos 40px! */
+    flex-direction: row; /* siguron që logo dhe hamburger janë në të njëjtën rresht */
+  }
+}
+@media (max-width: 1024px) {
+  .hamburger {
+  display: block;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e5e5e5;
+  order: 3; /* vendos hamburgerin në fund */
+  margin-left: auto; /* e shtyn maksimalisht në të djathtë */
+}
+.flynext-header {
+  display: flex;
+  flex-wrap: wrap;
+  .main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.main-nav li {
+  width: 100%;
+  text-align: left;
+  padding: 12px 5px; /* Ky padding e zhvendos tekstin në të majtë */
+  box-sizing: border-box;
+}
+
+}
+}
+
+
+
+@media (min-width: 1025px) {
+  .flynext-header {
+    height: 70px; /* trashja e navbar-it */
+    /* opsionale: mund të rrisësh padding-in për më shumë hapësirë */
+    padding: 0 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
